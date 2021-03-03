@@ -15,13 +15,10 @@ class Episode extends Component {
         }
     }
     componentDidUpdate(data){
-        console.log(data);
-        let {index}=this.props
+        console.log(data.index);
         if (data.history.location.search != data.location.search) {
-            console.log(index)
             this.setState({
-                index:data.index,
-                key:data.source
+                index:data.index
             })
         }
     }
@@ -29,7 +26,7 @@ class Episode extends Component {
         key:'',
     }
     onTabChange = (key, type) => {
-        // console.log(key, type);
+        console.log(key, type);
         this.setState({ [type]: key });
     }
     render() {

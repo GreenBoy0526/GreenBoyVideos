@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Menu, Affix,Input } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { HomeOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import http from "../utils/request";
 import {withRouter} from 'react-router-dom'
 
@@ -17,6 +17,9 @@ class NavMenu extends Component {
     handleClick = e => {
         console.log('click ', e);
         this.setState({ current: e.key });
+        if (e.key=='home') {
+            this.props.history.push(`/`)
+        }
     };
     onSearch = value => {
         // console.log(value)
@@ -28,8 +31,8 @@ class NavMenu extends Component {
         return (
             <Affix offsetTop={0}>
                 <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
-                    <Menu.Item key="mail" icon={<MailOutlined />}>
-                        Navigation One
+                    <Menu.Item key="home" icon={<HomeOutlined />}>
+                        首页
              </Menu.Item>
                     <Menu.Item key="app" disabled icon={<AppstoreOutlined />}>
                         Navigation Two
@@ -45,9 +48,7 @@ class NavMenu extends Component {
                         </Menu.ItemGroup>
                     </SubMenu>
                     <Menu.Item key="alipay">
-                        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                            Navigation Four - Link
-                        </a>
+                        111
                     </Menu.Item>
                     <Menu.Item>
                         <Search placeholder="请输入影片或演员名" style={{marginTop:8}} onSearch={this.onSearch} />
