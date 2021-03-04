@@ -16,9 +16,9 @@ class App extends Component {
       <div>
         {/* <NavMenu getVod={(list) => { this.setState({ VodList: list }) }}></NavMenu> */}
         <NavMenu></NavMenu>
-        <Route path='/s' component={VodList}></Route>
-        <Route path='/d' component={Detail}></Route>
-        <Route path='/v' component={Play}></Route>
+        <Route path='/GreenBoyVideos/s' component={VodList}></Route>
+        <Route path='/GreenBoyVideos/d' component={Detail}></Route>
+        <Route path='/GreenBoyVideos/v' component={Play}></Route>
       </div>
     );
   }

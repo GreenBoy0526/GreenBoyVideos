@@ -23,7 +23,7 @@ class NavMenu extends Component {
     };
     onSearch = value => {
         // console.log(value)
-        this.props.history.push(`/s?wd=${value}`)
+        this.props.history.push(`/GreenBoyVideos/s?wd=${value}`)
     }
     
     render() {

@@ -37,7 +37,7 @@ class Play extends Component {
         })
     }
     toVod = (source, index) => {
-        this.props.history.push(`/v?id=${this.state.id}&source=${source}&index=${index}`)
+        this.props.history.push(`/GreenBoyVideos/v?id=${this.state.id}&source=${source}&index=${index}`)
     }
     state = {
         detail: {},
@@ -71,7 +71,7 @@ class Play extends Component {
                             <VideoPlayer src={url ? url.urls[index].url : ''} width="1000" />
                         </div> :
                         <div style={{ margin: '0 auto', width: 1000 }}>
-                            <iframe src={url ? url.urls[index].url : ''} frameBorder="0" width="1000" height="700" allowFullScreen="true"></iframe>
+                            <iframe src={url ? url.urls[index].url : ''} frameBorder="0" width="1000" height="562" allowFullScreen="true"></iframe>
                         </div>
                 }
 

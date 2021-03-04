@@ -34,7 +34,7 @@ class Detail extends Component {
     }
     toVod=(source,index)=>{
         console.log(source)
-        this.props.history.push(`/v?id=${this.state.id}&source=${source}&index=${index}`)
+        this.props.history.push(`/GreenBoyVideos/v?id=${this.state.id}&source=${source}&index=${index}`)
     }
     state = {
         detail: {},

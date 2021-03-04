@@ -64,7 +64,6 @@ class VodList extends Component {
                     <div style={{textAlign:'center'}}>
                         {this.state.msg}
                     </div>
-
                 </>
             )
         }

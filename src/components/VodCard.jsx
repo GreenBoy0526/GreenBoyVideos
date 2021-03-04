@@ -18,7 +18,7 @@ class VodCard extends Component {
         detail: {}
     }
     todetail = (id) => {
-        this.props.history.push(`/d?id=${id}`)
+        this.props.history.push(`/GreenBoyVideos/d?id=${id}`)
     }
     render() {
         let { vod_name, type_name, vod_remarks, vod_time, vod_id } = this.props.data
